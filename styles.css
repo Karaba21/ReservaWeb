@@ -1,0 +1,251 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    margin: 0.5rem 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  #inicio {
+    background-color: #f4f4f4;
+  }
+  
+  .servicio {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form label {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1.1rem;
+  }
+  
+  form input, form button {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  #calendario {
+    max-width: 900px;
+    margin: 2rem auto;
+  }
+  
+  #horarios-disponibles {
+    margin-top: 2rem;
+  }
+  
+  #lista-horarios {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  #lista-horarios li {
+    background-color: #f4f4f4;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #lista-horarios li.seleccionado {
+    background-color: #aaffaa;
+    border: 2px solid #00cc00;
+  }
+  
+  #lista-horarios li.ocupado {
+    background-color: #ffcccc;
+    color: #cc0000;
+    cursor: not-allowed;
+  }
+  
+  #lista-horarios li.ocupado:hover {
+    background-color: #ffcccc;
+  }
+  
+  /* Estilos para el selector de peluquero */
+  #peluquero {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem auto;
+  }
+  
+  #peluquero:focus {
+    border-color: #00cc00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 204, 0, 0.5);
+  }
+  
+  #peluquero:hover {
+    background-color: #fff;
+    border-color: #00cc00;
+  }
+  
+  #peluquero option {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  /* Estilos para la etiqueta del peluquero */
+  label[for="peluquero"] {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  label[for="peluquero"]:hover {
+    color: #00cc00;
+  }
+  
+  /* Media Queries para responsive design */
+  @media (max-width: 768px) {
+    nav ul li {
+      margin: 0.5rem;
+    }
+  
+    .servicio {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    #calendario {
+      margin: 1rem auto;
+    }
+  
+    #lista-horarios li {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    form input, form button {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav ul li a {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    #peluquero {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  
+    label[for="peluquero"] {
+      font-size: 1rem;
+    }
+  }
+
+  /* Estilo para resaltar el día seleccionado en el calendario */
+.fc-day.dia-seleccionado {
+    background-color: #aaffaa !important; /* Fondo verde claro */
+    border: 2px solid #00cc00 !important; /* Borde verde */
+  }
+  
+  /* Estilo para la fecha seleccionada */
+  #fecha-seleccionada {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
